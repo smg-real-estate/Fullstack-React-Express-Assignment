@@ -7,11 +7,13 @@ RUN apk add --no-cache sqlite valkey
 # Set working directory
 WORKDIR /app
 
-# Copy package files
+# Copy package files and configuration
 COPY package*.json ./
+COPY nodemon.json ./
+COPY tsconfig.json ./
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Create directories for data and valkey
 RUN mkdir -p /app/data /app/config/valkey && \
@@ -23,5 +25,8 @@ USER node
 # Expose port 3000
 EXPOSE 3000
 
-# Start the application
-CMD ["npm", "start"] 
+# Set environment variables for TypeScript
+ENV NODE_OPTIONS="--loader ts-node/esm"
+
+# Start the application with nodemon in development mode
+CMD ["yarn", "start:backend"] 
