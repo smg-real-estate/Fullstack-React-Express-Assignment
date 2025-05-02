@@ -15,8 +15,9 @@ This is a TypeScript React project. Complete the following challenges. There is 
 
 ```mermaid
 graph TD;
-    1A
+    1A;
     1B;
+    2;
 ```
 
 ## Challenges
@@ -38,3 +39,12 @@ graph TD;
         - `sortDirection`: either `asc` or `desc`. default `asc`
         and returns the data in the format:
         - `{ page: 1, pageSize: 5, data: [...] }`
+
+2. _"Pictures of You"_
+
+- The endpoint `/listings/{:id}` returns the details for each listing.
+- To reduce number of requests, the endpoint cached the pictures in the local
+  assets folder.
+- However the code to convert pictures to Base64 is not working.
+  Can you fix it?
+  What is the code doing?
