@@ -11,12 +11,12 @@ yarn docker-run
 
 ## Instructions
 
-This is a TypeScript React project. Complete the following challenges. The order
-of the challenges is shown below.
+This is a TypeScript React project. Complete the following challenges. There is no particular order for the following challenges
 
 ```mermaid
 graph TD;
-    1A-->1B;
+    1A
+    1B;
 ```
 
 ## Challenges
@@ -30,6 +30,7 @@ graph TD;
         - `pageSize`: default 5
         and returns the data in the format:
         - `{ page: 1, pageSize: 5, data: [...] }`
+
     1B. JSON Sorting
       - The endpoint `/listings` returns a JSON that is sorted just by id.
       - Modify the endpoint so that it accepts the parameters:
