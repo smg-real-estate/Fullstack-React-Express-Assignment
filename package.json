@@ -4,21 +4,23 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-syntax-jsx": "7.25.9",
-    "@types/express": "^5.0.1",
+    "@types/express": "5.0.1",
     "@types/jest": "29.5.14",
     "@types/node": "22.14.0",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
     "express": "5.1.0",
+    "express-file-routing": "3.1.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "6.30.0",
     "react-scripts": "5.0.1",
+    "tsx": "4.19.4",
     "typescript": "4.9.5"
   },
   "scripts": {
-    "start": "yarn react-scripts start",
-    "start:backend": "nodemon --watch src --ext ts,js,json --exec 'ts-node ./src/server.ts'",
+    "start:frontend": "yarn react-scripts start",
+    "start:backend": "nodemon --watch src --ext ts,js,json --exec 'tsx ./src/server.ts'",
     "build": "cross-env CI=true yarn react-scripts build",
     "build:check": "tsc --noEmit && cross-env CI=true yarn react-scripts build",
     "test": "cross-env CI=true yarn react-scripts test",
@@ -55,8 +57,7 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "globals": "15.15.0",
     "husky": "9.1.7",
-    "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2"
+    "nodemon": "3.1.0"
   },
   "type": "module"
 }
